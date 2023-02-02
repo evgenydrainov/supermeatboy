@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scripts/player.gd" type="Script" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 14, 12 )
+
+[node name="Player" type="KinematicBody2D" groups=["player"]]
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2( 1.00699, 1 )
+shape = SubResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -14.0
+margin_top = -12.0
+margin_right = 14.0
+margin_bottom = 12.0
+color = Color( 0.658824, 0.133333, 0.133333, 1 )
